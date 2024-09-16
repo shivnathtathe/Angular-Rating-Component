@@ -1,0 +1,21 @@
+@import url('https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css');
+
+.star-rating {
+  position: relative;
+  display: inline;
+  width: 100%;
+  font-size: var(--star-size, 2rem); /* Default size if not provided */
+  color: var(--background-star-color, transparent); /* Background color of stars */
+  /* background-color: red; */
+}
+
+.star-rating::before {
+  content: '★★★★★'; 
+  color: var(--star-color, gray);
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  width: var(--star-width, 0%); 
+  /* width: 50%; */
+  height: 100%;
+}

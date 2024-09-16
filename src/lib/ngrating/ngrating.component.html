@@ -1,0 +1,35 @@
+<!-- <div *ngIf="maxRating">
+    <span *ngFor="let _ of [].constructor(maxRating); let i = index">
+    <span><i [ngStyle]="{'--color': color,'font-size':size +'rem'}" class="star-rating" class="ri-star-fill"></i></span>
+    </span>
+</div> -->
+
+<!-- Use the CSS class on the desired element -->
+<!-- <div *ngIf="rating >=0">
+  <span
+    [ngStyle]="{
+      '--star-color': color,
+      '--star-size': size +'rem',
+      '--star-width': rating  +'%',
+      '--background-star-color':backgroundStarColor
+    }"
+    class="star-rating"
+    >★★★★★</span
+  >
+</div> -->
+
+<div *ngIf="rating >= 0">
+    <span
+      [ngStyle]="{
+        '--star-color': color,
+        '--star-size': size + 'rem',
+        '--star-width': ratingPercent + '%',
+        '--background-star-color': backgroundStarColor
+      }"
+      class="star-rating"
+    >
+      ★★★★★
+    </span>
+    <span *ngIf="showCount">{{rating}}</span>
+  </div>
+  
